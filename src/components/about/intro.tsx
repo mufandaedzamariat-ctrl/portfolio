@@ -1,18 +1,9 @@
 import { about_Data } from "@/data/about";
-
-const cta = [
-  {
-    label: "contact",
-    href: "/contact",
-  },
-  {
-    label: "download CV",
-    href: "/cv",
-  },
-];
+import { useTheme } from "@/context/ThemeContext";
 
 export function AboutIntro() {
   const d = about_Data.intro;
+  const { setContact } = useTheme();
 
   return (
     <section className="grid grid-cols-1 items-center gap-8 md:gap-12 lg:grid-cols-12 lg:gap-8">
@@ -29,17 +20,20 @@ export function AboutIntro() {
 
         {/* Responsive Button Group */}
         <div className="flex flex-wrap items-center gap-4 sm:gap-6">
-          {cta.map((item, i) => (
-            <a key={i} href={item.href} className="inline-block">
-              <span
-                className={`inline-block rounded-xl border-4 border-app-brand-border p-2 text-sm font-semibold transition-all sm:px-6 sm:py-3 sm:text-base ${
-                  i === 1 ? "border-none bg-app-brand text-background" : ""
-                }`}
-              >
-                {item.label}
-              </span>
-            </a>
-          ))}
+          <button
+            type="button"
+            onClick={() => setContact(true)}
+            className="inline-block rounded-xl border-4 border-app-brand-border p-2 text-sm font-semibold transition-all sm:px-6 sm:py-3 sm:text-base"
+          >
+            {d.contactLabel}
+          </button>
+          <a
+            href={d.cv.href}
+            download
+            className="inline-block rounded-xl border-none bg-app-brand p-2 text-sm font-semibold text-background transition-all sm:px-6 sm:py-3 sm:text-base"
+          >
+            {d.cv.label}
+          </a>
         </div>
       </div>
 
