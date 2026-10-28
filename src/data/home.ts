@@ -10,7 +10,7 @@ const profile = {
   name: "Maria Tanaka Mufandaedza",
   email: "mufandaedzamariat@gmail.com",
   phone: "+263 79 013 6053",
-  whatsapp: "263790136053",
+  whatsapp: "+263790136053",
   location: `${address.city}, ${address.country}`,
   github: "https://github.com/mufandaedzamariat-ctrl",
   linkedin: "https://www.linkedin.com/in/maria-tanaka-mufandaedza-814423409",
