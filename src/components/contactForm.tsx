@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import {
   CheckCircle2,
+  MapPin,
   Mail,
   MessageCircle,
   Phone,
@@ -144,6 +145,10 @@ export default function ContactForm() {
                 <MessageCircle className="h-4 w-4 shrink-0 text-app-brand" />
                 WhatsApp
               </a>
+            </li>
+            <li className="flex items-center gap-3 text-app-text">
+              <MapPin className="h-4 w-4 shrink-0 text-app-brand" />
+              {Contact_Data.location}
             </li>
           </ul>
 

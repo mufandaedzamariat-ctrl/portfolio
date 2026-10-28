@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useTheme } from "@/context/ThemeContext";
+import { Contact_Data } from "@/data/home";
 
 const footerData = {
   profile: {
@@ -12,17 +13,6 @@ const footerData = {
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
   ],
-  socials: [
-    {
-      label: "LinkedIn",
-      href: "https://www.linkedin.com/in/maria-tanaka-mufandaedza-814423409",
-    },
-    { label: "GitHub", href: "https://github.com/mariatanaka" },
-  ],
-  contact: {
-    email: "mufandaedzamariat@gmail.com",
-    phone: "+90 548 859 89 97",
-  },
 };
 
 export function Footer() {
@@ -92,7 +82,7 @@ export function Footer() {
               Connect
             </span>
             <ul className="space-y-2">
-              {footerData.socials.map((s) => (
+              {Contact_Data.socials.map((s: { label: string; href: string }) => (
                 <li key={s.label}>
                   <a
                     href={s.href}
@@ -106,10 +96,10 @@ export function Footer() {
               ))}
               <li>
                 <a
-                  href={`mailto:${footerData.contact.email}`}
+                  href={`mailto:${Contact_Data.email}`}
                   className="text-xs text-app-text-muted transition-colors hover:text-app-brand block truncate max-w-[200px]"
                 >
-                  {footerData.contact.email}
+                  {Contact_Data.email}
                 </a>
               </li>
             </ul>

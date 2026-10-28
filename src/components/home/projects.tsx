@@ -1,4 +1,4 @@
-import { ArrowUpRight, BedDoubleIcon, CodeXml } from "lucide-react";
+import { ArrowUpRight, ExternalLink, Github, Linkedin } from "lucide-react";
 import { SectionHeader } from "@/components/sectionHeader";
 import { featuredProjects } from "@/data/home";
 
@@ -41,19 +41,28 @@ export const ProjectsSection = () => {
                     </span>
                   ))}
                 </div>
-                <div className="flex w-full justify-between px-3 my-4">
-                  {/* Project Link */}
-                  <a
-                    href={project.preview}
-                    className="group inline-flex items-center gap-1 text-sm font-semibold text-app-heading transition-colors hover:text-app-brand"
-                  >
-                    View project
-                    <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-                  </a>
-                  {/* codes */}
-                  <a href={project.preview}>
-                    <CodeXml className="h-4 w-4 hover:h-4.5 hover:w-4.5" />
-                  </a>
+                <div className="my-4 flex w-full flex-wrap gap-4 px-3">
+                  {project.links.map((link) => {
+                    const PlatformIcon =
+                      link.label === "GitHub" ? Github : Linkedin;
+
+                    return (
+                      <a
+                        key={link.label}
+                        href={link.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="group inline-flex items-center gap-1 text-sm font-semibold text-app-heading transition-colors hover:text-app-brand"
+                      >
+                        <PlatformIcon className="h-4 w-4" aria-hidden="true" />
+                        {link.label}
+                        <ExternalLink
+                          className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                          aria-hidden="true"
+                        />
+                      </a>
+                    );
+                  })}
                 </div>
               </div>
             </div>

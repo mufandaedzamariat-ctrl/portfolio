@@ -5,9 +5,9 @@ export const about_Data = {
   intro: {
     eyebrow: "Profile",
     title: "About me",
-    text: "I’m Maria Tanaka Mufandaedza, a Computer Engineering graduate and web developer at Upgrade Transformations, with additional freelance experience. I build practical web applications using technologies such as Python, Flask, React, and SQL. My graduation project, Virtual Stylist – Complete the Look, introduced me to image processing and AI-based recommendations. I’m continuing to grow as a software engineer through hands-on work and new projects.",
+    text: "I’m a Computer Engineering graduate and web developer specializing in full-stack web development, backend infrastructure, and technical writing. I build applications using Python, Flask, React, Node.js, and SQLite. I also have knowledge of networking fundamentals, domain configuration, and Microsoft 365 setup. My project experience includes database-driven applications, image processing, and AI-based recommendations, including my Virtual Stylist graduation project. I also have experience in customer service and digital marketing operations.",
     contactLabel: "Contact me",
-    cv: { label: "Download CV", href: "/Maria_Tanaka_CV.pdf" },
+    cv: { label: "Download CV", href: "/Maria_Tanaka_Mufandaedza_CV.pdf" },
     name: "Maria Tanaka Mufandaedza",
     role: "Computer Engineering Graduate & Web Developer",
     image: "/home/hero.jpeg",
@@ -185,6 +185,6 @@ export const about_Data = {
     title: "Let's build something useful",
     text: "I'm open to relevant web development opportunities, freelance projects, and collaborations that help me grow as an engineer.",
     contactLabel: "Contact me",
-    cv: { label: "Download CV", href: "/Maria_Tanaka_CV.pdf" },
+    cv: { label: "Download CV", href: "/Maria_Tanaka_Mufandaedza_CV.pdf" },
   },
 };

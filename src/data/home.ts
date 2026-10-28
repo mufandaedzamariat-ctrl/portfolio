@@ -9,9 +9,11 @@ import { Code, PencilRuler, Search, Sparkles } from "lucide-react";
 const profile = {
   name: "Maria Tanaka Mufandaedza",
   email: "mufandaedzamariat@gmail.com",
-  phone: "+90 548 859 89 97",
-  github: "https://github.com/mariatanaka",
-  linkedin: "",
+  phone: "+263 79 013 6053",
+  whatsapp: "263790136053",
+  location: `${address.city}, ${address.country}`,
+  github: "https://github.com/mufandaedzamariat-ctrl",
+  linkedin: "https://www.linkedin.com/in/maria-tanaka-mufandaedza-814423409",
 };
 
 const frontendTools = ["React", "Vite", "JavaScript", "HTML5", "CSS3"];
@@ -70,7 +72,7 @@ export const hero_Data: hero_Data_type = {
   country: address["country"],
   slogan: "Building practical technology. Engineering a better future.",
   description:
-    "Computer Engineering graduate and web developer building practical web applications, with project experience in databases, image processing, and AI-based recommendations.",
+    "Computer Engineering graduate and web developer focused on full-stack development, backend infrastructure, and technical writing. I also have knowledge of networking fundamentals, domain configuration, and Microsoft 365 setup, alongside project experience in databases, image processing, and AI-based recommendations.",
   cta: {
     label: "View my work",
     link: "/projects",
@@ -90,7 +92,8 @@ export const Contact_Data: any = {
 
   email: profile.email,
   phone: profile.phone,
-  whatsapp: "",
+  whatsapp: profile.whatsapp,
+  location: profile.location,
 
   // Add a valid form endpoint when one is configured.
   endpoint: "",
@@ -127,18 +130,21 @@ export const featuredProjects: PortfolioSkill[] = [
     tools: ["Python", "Flask", "JavaScript", "SQLite", "PyTorch", "OpenCV"],
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3Jqb7Q9XhBLij_zXhzJJ3_pgz6LQro6JlKPFdqZTeow&s=10",
-    github: "https://github.com/react",
-    preview: "https://www.amazon.com/",
+    links: [{ label: "LinkedIn", href: profile.linkedin }],
   },
   {
-    category: "Web Application Development",
+    category: "Luxe Thread Co.",
     description:
-      "Builds functional web interfaces and connects application features to backend services.",
-    tools: ["React", "JavaScript", "HTML5", "CSS3"],
+      "A full-stack clothing catalog with an admin panel, Flask API, and SQLite inventory.",
+    tools: ["React", "Vite", "Python", "Flask", "SQLite"],
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjnZIPphPmobA_Wv0UkFaB_3lgMh9gxBbzT3HuqsuOQg&s=10",
-    github: "https://github.com/motiondivision",
-    preview: "https://www.lookmovie2.to/movies/page/717",
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/mufandaedzamariat-ctrl/webapp",
+      },
+    ],
   },
   {
     category: "Movie Database Application",
@@ -147,8 +153,21 @@ export const featuredProjects: PortfolioSkill[] = [
     tools: ["C++", "SQL"],
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQls3iX17umINckfE02TChRY-qBXX3IgH8_Y26aPsO2XA&s=10",
-    github: "https://github.com/shadcn",
-    preview: "https://www.jeuneafrique.com/",
+    links: [{ label: "LinkedIn", href: profile.linkedin }],
+  },
+  {
+    category: "Meeting Tracker",
+    description:
+      "A company meeting tracker for managing meeting records with authenticated access and SQLite storage.",
+    tools: ["JavaScript", "Node.js", "Express", "SQLite"],
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjnZIPphPmobA_Wv0UkFaB_3lgMh9gxBbzT3HuqsuOQg&s=10",
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/mufandaedzamariat-ctrl/meeting-tracker",
+      },
+    ],
   },
 ];
 

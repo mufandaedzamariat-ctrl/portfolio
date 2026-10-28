@@ -15,6 +15,8 @@ export type PortfolioSkill = {
   description: string;
   tools: string[];
   image: string;
-  github: string;
-  preview: string;
+  links: {
+    label: "GitHub" | "LinkedIn";
+    href: string;
+  }[];
 };

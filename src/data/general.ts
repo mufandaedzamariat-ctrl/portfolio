@@ -5,12 +5,12 @@ export const logo: string = names
   .map((name) => name[0])
   .join("");
 
-export const profession: string = "Software developer";
+export const profession: string = "Web developer";
 
 export const contact: { platform: string; access: string }[] = [
   {
     platform: "whatsapp",
-    access: "+90 548 859 8997",
+    access: "+263 79 013 6053",
   },
   {
     platform: "instagram",
@@ -18,7 +18,7 @@ export const contact: { platform: string; access: string }[] = [
   },
   {
     platform: "linkedin",
-    access: "",
+    access: "https://www.linkedin.com/in/maria-tanaka-mufandaedza-814423409",
   },
   {
     platform: "email",
